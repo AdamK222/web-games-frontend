@@ -30,7 +30,7 @@ export default class Create extends Forms {
   }
 
   validationSchema = {
-    name: Joi.string().required().label('Game name'),
+    name: Joi.string().min(3).max(20).required().label('Game name'),
     playerName: Joi.string().required().label('Rival nickname')
   }
 
